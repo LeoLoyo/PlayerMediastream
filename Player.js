@@ -1,15 +1,23 @@
 import React, {useEffect} from 'react';
-import {SafeAreaView, View, Text, StyleSheet} from 'react-native';
+import {SafeAreaView, View, Text, StyleSheet, NativeModules} from 'react-native';
 import Orientation from 'react-native-orientation-locker';
+console.log("TCL: NativeModules", NativeModules)
+// import {
+//   MediastreamPlayer,
+//   MediastreamPlayerModules,
+// } from 'react-native-mediastream-player';
 
 function Player() {
   useEffect(() => {
     Orientation.lockToLandscapeLeft();
-    return Orientation.lockToPortrait;
+    return () => [
+      // MediastreamPlayerModules.dismissMediastreamPlayer(),
+      Orientation.lockToPortrait(),
+    ];
   });
   return (
     <SafeAreaView style={styles.container}>
-      <View>
+      <View style={styles.player}>
         <Text>Player</Text>
       </View>
     </SafeAreaView>
@@ -22,6 +30,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'teal',
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  player: {
+    backgroundColor: 'black',
+    height: '100%',
+    width: '100%',
   },
 });
 

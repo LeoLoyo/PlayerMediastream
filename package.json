@@ -17,7 +17,8 @@
     "react-native-reanimated": "1.3.0",
     "react-native-screens": "1.0.0-alpha.23",
     "react-navigation": "4.0.10",
-    "react-navigation-stack": "1.9.3"
+    "react-navigation-stack": "1.9.3",
+    "react-native-mediastream-player": "git+ssh://git@github.com/mediastream/RNMediastreamPlayer.git#feature/config-podspec"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

@@ -263,7 +263,7 @@ DEPENDENCIES:
   - ReactCommon/jscallinvoker (from `../node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
-  - RNMediastreamPlayer (from `../node_modules/react-native-mediastream-player/ios/RNMediastreamPlayer.podspec`)
+  - RNMediastreamPlayer (from `../node_modules/react-native-mediastream-player/ios`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
   - RNScreens (from `../node_modules/react-native-screens`)
   - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
@@ -328,7 +328,7 @@ EXTERNAL SOURCES:
   RNGestureHandler:
     :path: "../node_modules/react-native-gesture-handler"
   RNMediastreamPlayer:
-    :podspec: "../node_modules/react-native-mediastream-player/ios/RNMediastreamPlayer.podspec"
+    :path: "../node_modules/react-native-mediastream-player/ios"
   RNReanimated:
     :path: "../node_modules/react-native-reanimated"
   RNScreens:
@@ -366,11 +366,11 @@ SPEC CHECKSUMS:
   React-RCTVibration: 8be61459e3749d1fb02cf414edd05b3007622882
   ReactCommon: 4fba5be89efdf0b5720e0adb3d8d7edf6e532db0
   RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
-  RNMediastreamPlayer: 8278ea2256dde46e40a7718b65a105bac5df1b89
+  RNMediastreamPlayer: eed80526a109f76484d963e4deb88df104f6cef5
   RNReanimated: 6abbbae2e5e72609d85aabd92a982a94566885f1
   RNScreens: f28b48b8345f2f5f39ed6195518291515032a788
   Yoga: d8c572ddec8d05b7dba08e4e5f1924004a177078
 
-PODFILE CHECKSUM: d2fe5b4f7afe4246bdd9544dab55868c0b252cde
+PODFILE CHECKSUM: 661848e370120345710298da796cd24f666fc1a9
 
 COCOAPODS: 1.7.5
