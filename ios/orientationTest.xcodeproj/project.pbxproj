@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* orientationTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* orientationTestTests.m */; };
 		0746BD7C07CC8922CB610B34 /* libPods-orientationTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A20251FCC4A507D6447B0778 /* libPods-orientationTest.a */; };
+		0A80467623438E4B0007384F /* Test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A80467523438E4B0007384F /* Test.swift */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
@@ -45,6 +46,8 @@
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* orientationTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = orientationTestTests.m; sourceTree = "<group>"; };
 		07C604497B83B964A0B3FF07 /* Pods-orientationTest-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orientationTest-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-orientationTest-tvOSTests/Pods-orientationTest-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		0A80467423438E4B0007384F /* orientationTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "orientationTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0A80467523438E4B0007384F /* Test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Test.swift; sourceTree = "<group>"; };
 		0DCE97994356FFAB5816E006 /* Pods-orientationTest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-orientationTest-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-orientationTest-tvOS/Pods-orientationTest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* orientationTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = orientationTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = orientationTest/AppDelegate.h; sourceTree = "<group>"; };
@@ -132,6 +135,8 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				0A80467523438E4B0007384F /* Test.swift */,
+				0A80467423438E4B0007384F /* orientationTest-Bridging-Header.h */,
 			);
 			name = orientationTest;
 			sourceTree = "<group>";
@@ -194,7 +199,6 @@
 				C3AB7A9BF126341E196DCEA7 /* Pods-orientationTestTests.debug.xcconfig */,
 				BD32A48F8CA609BECCA4D061 /* Pods-orientationTestTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -230,6 +234,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				BBA96B417B05350264734033 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -292,6 +297,9 @@
 						CreatedOnToolsVersion = 6.2;
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
+					13B07F861A680F5B00A75B9A = {
+						LastSwiftMigration = 1030;
+					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
@@ -308,6 +316,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -371,7 +380,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh";
+			shellScript = "export NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
 		};
 		0B496BFC3A9C2E4C4B4F2A74 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -429,6 +438,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBA96B417B05350264734033 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-orientationTest/Pods-orientationTest-frameworks.sh",
+				"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK/GoogleInteractiveMediaAds.framework",
+				"${PODS_ROOT}/MediastreamPlatformSDKiOS/MediastreamPlatformSDK.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleInteractiveMediaAds.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MediastreamPlatformSDK.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-orientationTest/Pods-orientationTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		EEF183D59D2C7F36148FE232 /* [CP] Check Pods Manifest.lock */ = {
@@ -530,6 +559,7 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				0A80467623438E4B0007384F /* Test.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -582,6 +612,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = C3AB7A9BF126341E196DCEA7 /* Pods-orientationTestTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -605,6 +636,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BD32A48F8CA609BECCA4D061 /* Pods-orientationTestTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = orientationTestTests/Info.plist;
@@ -625,11 +657,21 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6191138CBB1E3D79FCB48D8B /* Pods-orientationTest.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK\"",
+					"\"${PODS_ROOT}/MediastreamPlatformSDKiOS\"",
+				);
 				INFOPLIST_FILE = orientationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -637,6 +679,11 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = orientationTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "orientationTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -645,10 +692,20 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 801DB67234C2E2688D55A37B /* Pods-orientationTest.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/GoogleAds-IMA-iOS-SDK\"",
+					"\"${PODS_ROOT}/MediastreamPlatformSDKiOS\"",
+				);
 				INFOPLIST_FILE = orientationTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = "";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -656,6 +713,10 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = orientationTest;
+				SWIFT_OBJC_BRIDGING_HEADER = "orientationTest-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
@@ -732,8 +793,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
 					"-lc++",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.orientationTest-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -759,8 +820,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
 					"$(inherited)",
-					"-ObjC",
 					"-lc++",
+					"-ObjC",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.orientationTest-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
